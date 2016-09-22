@@ -1,0 +1,38 @@
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<div class="jumbotron">
+   <div
+   class="container" >
+     <h1><Center>See some sweet recipes yo!</Center></h1>
+     <p><center>They. Be. Yummy.</center></p>
+  <center> <a class="btn btn-primary btn-lg"  role="button" onclick="location.href='recipes'" ><center> Check Check em </center></a> </center>
+   </div>
+
+
+<p id="notice"><%= notice %></p>
+
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td> <img src=<%= recipe.picture %>></td>
+
+    </tr>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipe', new_recipe_path %>
+
+</html>
